@@ -1,0 +1,9 @@
+<div class="products-by-category" id="products-by-category-{{ID}}">
+    <div id="products-container"></div>
+</div>
+<script>
+    jQuery(document).ready(function($) {
+        var categorySlug = '{{category_slug}}'; // This will be dynamically replaced by Elementor
+        window.initProductsByCategory(categorySlug);
+    });
+</script>
