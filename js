@@ -2,7 +2,7 @@ window.initProductsByCategory = function(categorySlug) {
     const postsPerPage = 6;
     
     // Use the site's root URL
-    const siteUrl = 'https://3daiartmodels.com';
+    const siteUrl = 'your website url';
     
     // Construct the API URL
     let apiUrl = `${siteUrl}/wp-json/wc/v3/products?per_page=${postsPerPage}`;
@@ -18,7 +18,7 @@ window.initProductsByCategory = function(categorySlug) {
         url: apiUrl,
         method: 'GET',
         beforeSend: function(xhr) {
-            xhr.setRequestHeader('Authorization', 'Basic ' + btoa('ck_f741bb4d9b7520c8914b1af43d3028de9b523330:cs_1492ea34f6eb232d711292dd8b7772beb80609ae'));
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa('rest api consumer key:rest api consumer secret'));
         },
         success: function(products) {
             console.log('Products received:', products); // For debugging
